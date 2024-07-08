@@ -1,0 +1,22 @@
+{
+  "name": "hope-hack2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.6",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mysql2": "^3.10.2",
+    "node-fetch": "^2.7.0",
+    "nodemon": "^3.1.4"
+  }
+}

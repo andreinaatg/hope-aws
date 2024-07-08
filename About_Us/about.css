@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');   
+/* Banner Image */
+.banner_image{
+  background: url("/woman2.jpg") no-repeat top center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:Nunito, sans-serif; 
+}
+
+
+.banner_content{
+  text-align: center;
+  color: #fff;
+}
+
+.banner_content h1 {
+  text-transform: uppercase;
+  line-height: 38px;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.banner_content h1 span{
+  color: #579BB1 ;
+}
+
+.banner_content p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); 
+  font-size: 1.5em;
+}
+
+
+/* About us */
+.about,
+.services,
+.contactus,
+.ourteam{
+  padding: 5% 10%;
+  text-align: center;
+}
+
+/* Services */
+.services{
+  background: #579BB1 ;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+
+.services p{
+  color:white;
+}
+
+.services h1{
+  color:white;
+}
+
+
+
+.diff_services{
+  display: flex;
+  margin-top: 35px;
+  justify-content: space-between;
+}
+
+.diff_service_item{
+  width: 30%;
+}
+
+.diff_service_item img{
+  width: 100%;
+  margin-bottom: 25px;
+  height:auto;
+  
+}
+.diff_service_item video {
+  width: 100%;
+  margin-bottom: 25px;
+  height:auto;
+ 
+}
+
+.services figcaption p {
+  color: #ffffff; 
+  margin-bottom: 10px; 
+}
+
+
+
+.diff_service_item h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+  
+.chart-container {
+  position: relative;
+  margin: auto;
+  height: 400px;
+  width: 80%;
+  max-width: 1000px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 50px; 
+}
+.impact-content {
+  text-align: center; 
+}
+
+.impact-content p {
+  text-align: center; 
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 0 10px; 
+  margin-bottom:40px;
+}
+
+.impact-content h2 {
+  margin-bottom: 100px; 
+  margin-top:60px;
+}
+
+
+@media (max-width: 768px) {
+  .chart-container {
+    height: 300px;
+    width: 100%;
+  }
+  
+  .section {
+    padding-bottom: 50px; 
+  }
+  .about,
+  .services,
+  .contactus,
+  .ourteam {
+    padding: 5%;
+  }
+  .diff_services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .diff_service_item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .chart-container {
+    height: 300px;
+    width: 100%;
+  }
+
+  
+  .section {
+    padding-bottom: 50px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .banner_image {
+    height: 400px;
+  }
+
+  .banner_content h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .banner_content p {
+    font-size: 16px;
+  }
+
+  .about,
+  .services,
+  .contactus,
+  .ourteam {
+    padding: 5% 2%;
+  }
+}
+
+
+

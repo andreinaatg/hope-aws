@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">   <link rel="stylesheet" href="/logo.css" />
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  <link rel="stylesheet" href="/footer.css" />
+  <link rel="stylesheet" href="/nav.css" /> 
+  <link rel="stylesheet" href="/hamburger.css" />
+  <link rel="stylesheet" href="/mediaQuery.css" />
+  <link rel="stylesheet" href="/data.css" />
+
+
+</head>
+<body>
+  <header>
+    <nav role ="navigation">
+      <div class = "logo">
+        <a href ="#">Air Aware</a>
+      </div>
+        <ul class="navMenu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/data">BeAware</a></li>
+          <li><a href="/form">Donation</a></li>
+        </ul>
+    
+    
+    <div id="menuToggle">
+      <input type="checkbox" />
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <a href="/"><li>Home</li></a>
+        <a href="/about"><li>About</li></a>
+        <a href="/data"><li>BeAware</li></a>
+        <a href="/form"><li>Donation</li></a>
+        
+      </ul>
+    </div>
+    </nav>
+  </header>
+  <main>
+    <section class="form-container">
+      <div id="input-graph">
+        <form id="airQualityForm">
+          <input placeholder="zipCode" id="zipCode" type="text">
+          <button type="submit">Search</button>
+        </form>
+        <div id="result"></div>
+        <div class="container">
+          <div class="graph-container" style="display:none;">
+            <div id="gaugeContainer"></div>
+            <div class="img-container">
+              <img src="aqi-indexx.svg">
+            </div>
+          </div>          
+        </div>
+      </div>
+    </section>
+
+    <section class="map-info-section">
+      <h2 id="current-h2">Current Air Quality</h2>
+      <div class="map-info-row">
+      <div id="map"></div>
+      <div id="airQualityConditions">
+        <h2>Primary Pollutant</h2>
+        <div class="conditions-row">
+          <div id="primaryPollutant"></div>
+          <div id="aqi"></div>
+          <div id="quality"></div>
+        </div>
+        <div class="facts-container">
+          <ul class="facts-accordion">
+            <li>
+              <input type="radio" id="fact1" checked name="facts-accordion-group" >
+              <label for="fact1"> Ozone (O3)</label>
+              <div class="facts">
+                <p>The fumes as you walk by the mechanic or a print shop not only are bad to inhale, but also contribute to the smog we see in our cities. Ground-level ozone (also known as the “bad” ozone) is created by a chemical reaction in the presence of sunlight that forms between man-made VOCs and nitrogen oxides. This explains why ozone levels tend to be higher—and subsequently more dangerous—in the summertime. The effectsf from exposure to OZONE are irritation and inflammation of eyes, nose, throat and lower airways: coughing, sore and scratchy thro.</p>              
+                </div>
+            </li>
+            <li>
+              <input type="radio" id="fact2" name="facts-accordion-group">
+              <label for="fact2">Particulate Matter (PM10 and PM2.5)</label>
+              <div class="facts">
+                <p>PM is a mixture of solids or liquid droplets in the air that are categorized by size:
+                  PM10: Inhalable particles that are less than or equal to 10 micrometers in diameter. Examples include dust, pollen, and mold.<br>
+                  PM2.5: Fine particles that are less than or equal to 2.5 micrometers in diameter. To put this in perspective, they are about 1/30th of a strand of human hair (too small for the human eye to see).</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>      
+  </div>
+    </section>
+
+    <section class="aware-section">
+      <img src="AirlOGO.svg" alt="header" class="heading">
+      <ul class="accordion">
+          <li>
+              <input type="radio" id="firts" checked name="accordion-group">
+              <label for="firts">Air Pollution</label>
+              <div class="content">
+                  <p>Air pollution  the combination of outdoor and indoor particulate matter and ozone  is a risk factor for many of the leading causes of death, including heart disease, stroke, lower respiratory infections, lung cancer, diabetes, and chronic obstructive pulmonary disease (COPD).
+                  </p>
+          </div>
+          </li>
+          <li>
+              <input type="radio"  id="second" name="accordion-group">
+              <label for="second">Air pollution is one of the leading risk factors for disease burden</label>
+              <div class="content">
+                <p>Air pollution is one of the leading risk factors for death. But its impacts go even further; it is also one of the main contributors to the global disease burden.
+                  Global disease burden takes into account not only years of life lost to early death but also the number of years lived in poor health. Air pollution not only takes years from people's lives but also has a large effect on the quality of life while they're still living.
+                </p>
+          </div>
+          </li>
+          <li>
+              <input type="radio" id="thrid" name="accordion-group">
+              <label for="thrid">Death rates from air pollution are highest in low-to-middle-income countries</label>
+              <div class="content">
+                  <p>The burden of air pollution tends to be greater across both low and middle-income countries for two reasons: indoor pollution rates tend to be high in low-income countries due to a reliance on solid fuels for cooking, and outdoor air pollution tends to increase as countries industrialize and shift from low to middle incomes.</p>
+          </div>
+          </li>
+          <li>
+              <input type="radio" id="fourth" name="accordion-group">
+              <label for="fourth">How are death rates from air pollution changing?</label>
+              <div class="content">
+                  <p>The death rate from air pollution has been declining globally, with some estimates suggesting a halving since 1990. This decline has been primarily due to improvements in indoor air pollution. However, deaths from other types of air pollution like Fossil Fuel air pollution has increase. A study published in Environmental Research found that air pollution from burning fossil fuels is responsible for about 1 in 5 deaths worldwide, with more than 8 million people dying in 2018 from fossil fuel pollution.</p>
+          </div>
+          </li>
+      </ul>
+  </section>
+
+  </main>
+  <footer>
+    <div class="footerContainer">
+      <div class="footerNav">
+        <ul>
+          <h4>QUICK LINKS</h4>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/data">BeAware</a></li>
+          <li><a href="/form">Donate</a></li>
+        </ul>
+      </div>
+      <div class ="footerNav">
+        <h4>CONNECT</h4>
+      <p>CALL:
+        <strong>1.800.123.4567</strong>
+      </p>
+      <p>EMAIL:
+        <strong>5zKkO@example.com</strong>
+      </p>
+        <strong>123 Main St. Anytown, USA 12345</strong>
+      </div>
+      <form method="post" class="newsLetter" action="/news" >
+        <p> NEWSLETTER SIGNUP</p>
+        <input name="donate" type="text" placeholder="Enter your email address">
+        <button>SIGN UP</button>
+      <div class="socialIcons">
+        <a href="https://www.facebook.com/tony.yang.712/"><i class="fa-brands fa-facebook" id="icons1"></i></a>
+        <a href="https://www.instagram.com/_tony.yang_/" id="icons1"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/?lang=en"><i class="fa-brands fa-twitter" id="icons1"></i></a>
+      </div>
+    </form>
+    </div>
+    <div class="footerBottom">
+      <p>Copyright &copy; 2024 designed by <span class="designer">AirAware</p>
+    </div>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/justgage@1.4.0/dist/justgage.min.js"></script>
+  <script>
+    (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+      key: "AIzaSyCO6Mle-P4bJLUeHJzTlLJc05sF-z98OMQ",
+      v: "weekly",
+    });
+  </script>
+  <script src="data.js"></script>
+</body>
+</html>

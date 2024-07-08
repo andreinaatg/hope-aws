@@ -1,0 +1,281 @@
+* {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: #F8F9FA;
+}
+
+.form-container {
+  background-color: #fff;
+  height: 70vh;
+  width: 50vw;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+.form-container .donation-info {
+  background: url(images/Girl-pollution.png) no-repeat;
+  background-size: contain;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 20px;
+}
+.form-container .donation-info p {
+  text-align: right;
+  position: relative;
+  margin-top: 10px;
+  margin-right: 20px;
+  font-size: 1.2rem;
+  width: 20vw;
+  padding: 30px;
+}
+.form-container .form {
+  background-color: #fff;
+  padding: 0 20px 20px 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form-container .form .form-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 30px 10px 50px 10px;
+}
+.form-container .form .form-group {
+  width: 48%;
+  position: relative;
+  padding: 0 20px;
+}
+.form-container .form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.form-container .form .form-group input:focus {
+  border-color: #B6C7AA;
+}
+
+.form-container .form .form-group label {
+  position: absolute;
+  top: 35%;
+  left: 30px;
+  transform: translateY(-50%);
+  background-color: white;
+  color: #aaa;
+  transition: 0.2s;
+}
+
+.form-container .form .form-group input:not(:-moz-placeholder-shown) + label {
+  top: -10px;
+  left: 5px;
+  color: #B6C7AA;
+  font-size: 12px;
+}
+
+.form-container .form .form-group input:focus + label,
+.form-container .form .form-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 5px;
+  color: #B6C7AA;
+  font-size: 12px;
+}
+
+.form-container .form .form-group .required {
+  color: red;
+}
+.form-container .form .form-group .error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.form-container .form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #579BB1;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+}
+.form-container .form button:hover {
+  background-color: #579ab1c0;
+}
+
+h1 {
+  text-align: center;
+  color:#579BB1 ;
+  font-family: "Sarabun", sans-serif;
+  font-weight: 800;
+}
+
+/* solutions css*/
+.solutions {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px; /* Adjust as needed */
+  margin-bottom: 100px;
+  flex-wrap: wrap;
+}
+
+.solution-box {
+  width: 100%; /* Ensure each box takes full width */
+  max-width: 300px; /* Adjust max-width based on your layout */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transition properties */
+  color: black;
+}
+
+.solution-box:hover {
+  transform: translateY(-5px); /* Move box up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+  background-color: #ddd9d9cc; /* Light background color on hover */
+}
+
+.solution-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.solution-box p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.solution-box img {
+  width: 100%;
+  height: auto;
+  max-width: 250px; 
+  display: block;
+  margin: 0 auto; 
+  border-radius: 8px;
+  margin-top: 10px; 
+}
+
+/* donations css*/
+.why{
+  color: #579BB1 ;
+  font-size: 40px;
+  font-family: "Sarabun", sans-serif;
+  font-weight: 800;
+}
+
+#important {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.importance {
+  color: black;
+  width: 40vw;
+}
+
+.importance p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sh {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 800;
+  text-align: center;
+  font-size: 40px;
+  color: #579BB1;
+}
+
+@media (max-width: 425px) {
+  .form-container .form .form-group input:not(:-moz-placeholder-shown) + label {
+    top: 0px;
+  }
+  .form-container .form .form-group input:focus + label,
+  .form-container .form .form-group input:not(:placeholder-shown) + label {
+    top: 0px;
+  }
+}
+
+@media (max-width: 436px) {
+  .form-container .donation-info p {
+    display: none;
+  }
+}
+
+@media (max-width: 605px) {
+  .form-container .donation-info p {
+    display: none;
+  
+  }
+}
+
+@media (max-width: 768px) {
+  .form-container {
+    width: 70vw;
+    height: auto;
+  }
+  .form-container .donation-info {
+    height: 150px;
+  }
+  .form-container .donation-info p {
+    right: 10px;
+    font-size: 1rem;
+    width: 40vw;
+  }
+  .form-group {
+    width: 100%;
+    padding: 0 0 20px 0;
+  }
+ 
+}
+@media (min-width: 768px) {
+  .form-container {
+    height: auto;
+  }
+}
+@media (max-width: 425px) {
+  .form-container .form {
+    margin: 10px 0 0 0;
+  }
+  .form-container .form .form-row {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px 0 10px;
+  }
+  .form-container .form .form-group input {
+    margin: 20px 0;
+  }
+  .form-container .form .form-group label {
+    font-size: 0.9rem;
+    top: 40%;
+    padding-top: 5px;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .form-container .donation-info p {
+    right: -65px;
+    font-size: 0.7rem;
+    width: 35vw;
+    display: none;
+  }
+  .form-container .donation-info {
+    height: 120px;
+  }
+}/*# sourceMappingURL=form.css.map */

@@ -1,0 +1,384 @@
+$font: "Nunito", sans-serif;
+$header: "Sarabun", sans-serif;
+$blue: #579bb1;
+$white: #ffffff;
+$darkerWhite: #f0f0f0;
+
+
+@mixin flexCenter($direction, $content, $align) {
+  display: flex;
+  justify-content: $content;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+
+
+h2 {
+  font-family: $header;
+  font-weight: 800;
+  font-size: 2rem;
+  font-weight: 800;
+  color: $blue;
+}
+
+
+body {
+  background-color: $white;
+}
+
+main {
+  @include flexCenter(column, center, center);
+}
+
+label::before {
+  content: '↓';
+  margin-right: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+.form-container {
+  background: url(sky-5534319_1920.jpg) no-repeat center;
+  background-size: cover;
+  margin: 0 auto;
+  height: 70vh;
+  width: 100vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  @include flexCenter(column, center, center);
+
+  #input-graph {
+    width: 800px;
+    background-color: transparent;
+    padding: 26px;
+    border-radius: 8px;
+    @include flexCenter(row-reverse, center, center);
+  }
+
+  .graph-container {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    margin: 55px;
+    overflow: hidden;
+    background: rgba(69, 88, 104, 0.6);
+    @include flexCenter(column, flex-start, center);
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: rgba(42, 58, 77, 0.6);
+      z-index: 1;
+    }
+
+    .img-container {
+      z-index: 2;
+      position: absolute;
+      left: 80px;
+      bottom: 15%;
+      img {
+        max-width: 80%;
+        max-height: 100%;
+      }
+    }
+
+    #gaugeContainer {
+      position: relative;
+      width: 100%; // Use percentage-based width
+      height: 100%; // Use percentage-based height
+      top: -22%;
+    }
+  }
+
+  #airQualityForm {
+    width: 300px;
+    background-color: transparent;
+    bottom: 0;
+    padding: 0 20px 20px 20px;
+    border-radius: 8px;
+    @include flexCenter(row, center, center);
+
+    label {
+      color: $white;
+    }
+
+    #zipCode {
+      max-width: 150px;
+      padding: 14px;
+      font-size: 17px;
+      color: black;
+      border-top-left-radius: .5em;
+      border-bottom-left-radius: .5em;
+      border: 2px solid $white;
+      margin-right: -10px;
+      outline: none;
+    }
+
+    button {
+      border: none;
+      background-color: $blue;
+      text-decoration: none;
+      padding: 15px;
+      padding-bottom: 17px;
+      font-size: 17px;
+      color: $white;
+      border-top-right-radius: .5em;
+      border-bottom-right-radius: .5em;
+      cursor: pointer;
+    }
+  }
+}
+
+.map-info-section {
+  height: 60vh;
+  width: 70vw;
+  @include flexCenter(column, center, center);
+  background-color: transparent;
+  margin-bottom: 150px;
+  margin-top:60px;
+
+  .map-info-row {
+    height: 70vh;
+    width: 100vw;
+    @include flexCenter(row, space-evenly, flex-start);
+  }
+
+  #map {
+    height: 450px;
+    width: 50%;
+  }
+
+  #airQualityConditions {
+    height: fit-content;
+    width: 45%;
+    box-shadow: 0 0 10px rgba(128, 162, 213, 0.482);
+    text-align: center;
+    @include flexCenter(column, flex-start, center);
+  }
+
+  .conditions-row {
+    font-size: 1.3rem;
+    @include flexCenter(row, center, center);
+
+    #aqi {
+      @include flexCenter(row, center, center);
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      margin: 0 15px;
+    }
+  }
+
+  .facts-container {
+    .facts-accordion {
+      width: 80%;
+
+      li {
+        list-style: none;
+        width: 100%;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 8px;
+
+        label {
+          padding: 10px;
+          font-family: $font;
+          font-size: 18px;
+          font-weight: 500;
+          color: $blue;
+          cursor: pointer;
+        }
+    
+
+      .facts {
+        overflow: hidden;
+        transition: max-height 0.5s, padding 0.5s;
+        max-height: 0;
+      }
+
+      input[type='radio']:checked + label + .facts {
+        max-height: 450px;
+        padding: 10px 10px 20px;
+      }
+
+      input[type='radio']:checked + label::before {
+        content: '-';
+      }
+
+      label::before {
+        content: '+';
+        margin-right: 10px;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      input[type='radio'] {
+        display: none;
+      }
+    }
+    }
+  }
+}
+
+.aware-section {
+  background-color: $darkerWhite;
+  width: 100vw;
+  height: 70vh;
+  margin-top: 30px;
+  @include flexCenter(row,center,center);
+  .heading {
+    height: auto;
+    width: 30%;
+  }
+}
+
+.accordion {
+  width: 50vw;
+
+  li {
+    list-style: none;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(128, 162, 213, 0.482);
+    background: $darkerWhite;
+
+
+    label {
+      @include flexCenter(row, center, center);
+      padding: 10px;
+      font-family: $font;
+      font-size: 18px;
+      font-weight: 500;
+      color: $blue;
+      cursor: pointer;
+    }
+  }
+
+  .content {
+    text-align: center;
+    color: $blue;
+    padding: 0 10px;
+    line-height: 26px;
+    font-family: $font;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+  }
+
+  input[type='radio']:checked + label + .content {
+    max-height: 450px;
+    padding: 10px 10px 20px;
+  }
+
+  input[type='radio']:checked + label::before {
+    content: '↑';
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .form-container #input-graph {
+    width: 68%;
+    @include flexCenter(column, center, center);
+  }
+
+  .form-container .graph-container {
+    height: 250px;
+    width: 250px;
+    left: 5%;
+    right: 50%;
+    margin: 0 auto;
+    @include flexCenter(column, center, center);
+    #gaugeContainer {
+      width: 95%;
+      height: 95%;
+      top: -25%;
+    }
+    .img-container {
+      left: 28px;
+      img {
+        max-width: 95%;
+      }
+    }
+  }
+
+  .form-container #airQualityForm {
+    padding-top: 0px;
+    width: 100%;
+  }
+
+  .map-info-section {
+    height: 70vh;
+    width: 80vw;
+    @include flexCenter(column, center, center);
+
+    #current-h2 {
+      display: none;
+    }
+
+    .map-info-row {
+      height: 50vh;
+      width: 90vw;
+      @include flexCenter(column, center, center);
+      #map {
+        display: none;
+      }
+    }
+
+    #airQualityConditions {
+      height: fit-content;
+      width: 100%;
+      margin-top: 200px;
+      margin-bottom: 80px;
+    }
+
+  }
+
+  .accordion {
+    width: 90%;
+    margin-bottom: 30px;
+    padding: 0;
+  }
+  
+  .aware-section{
+    height: 85vh;
+@include flexCenter(column, center, center );
+ }
+
+ .facts-accordion {
+  padding: 40px;
+ }
+
+}
+
+@media (max-width:425px) {
+  .facts-accordion {
+    padding: 0;
+   }
+  .aware-section .heading {
+    width: 50%;
+  }
+  .aware-section {
+    height: 100vh;
+  }
+}
+
+@media (max-width:375px) {
+  .map-info-section{
+    height: 75vh;
+  }
+  .aware-section {
+    height: 105vh;
+  }
+}
+
+

@@ -1,0 +1,107 @@
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .navMenu li a,
+  .logo {
+    display: none;
+  }
+}
+/* Media queries for different screen sizes */
+@media screen and (max-width: 768px) {
+  #menuToggle {
+    display: block; /* Display menuToggle on smaller screens */
+    cursor: pointer; /* Change cursor to pointer for better UX */
+    padding: 10px;
+  }
+
+  /* Adjust styles when the menuToggle is checked */
+  #menuToggle input:checked ~ #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+  }
+
+  /* Adjust styles for the menu */
+  #menu {
+    display: none; /* Hide menu by default on smaller screens */
+    /* width: 100vw;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  }
+
+  #menu li {
+    margin-bottom: 10px; /* Increase margin-bottom for better spacing */
+  }
+  .newsLetter button {
+    max-width: 320px;
+  }
+}
+
+/* Sceens greater than 1024px,removes the hamburger menu */
+
+@media screen and (min-width: 768px) {
+  #menuToggle {
+    display: none;
+  }
+}
+@media screen and (min-width: 481px) {
+  #menuToggle {
+    display: none;
+  }
+}
+
+/* Mobile for screens smaller than 480px */
+@media (max-width: 480px) {
+  .footerContainer,
+  .footerNav ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerNav {
+    text-align: center;
+  }
+  #menuToggle {
+    padding: 5px;
+    top: -60px;
+  }
+  .footerContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .socialIcons {
+    margin-bottom: 20px;
+  }
+  .footerNav {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 480px) {
+  #menuToggle input:checked ~ #menu {
+    width: 82.5vw;
+  }
+}
+@media (max-width: 320px) {
+  .newsLetter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .newsLetter button {
+    width: 115%;
+  }
+  .newsLetter input[type="text"] {
+    width: 100%;
+  }
+  .socialIcons {
+    margin-bottom: 20px;
+  }
+  .footerNav {
+    margin: 20px;
+  }
+  #menuToggle input:checked ~ #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 76.5vw;
+  }
+}

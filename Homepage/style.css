@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+/* Reset some default browser styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; 
+}
+
+
+.App-header {
+    background-color: rgba(182, 199, 170, 0.9); 
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.App-header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.App-header a:hover {
+    text-decoration: underline;
+}
+
+
+/* Hero Section Styling */
+#home {
+    position: relative;
+    background: url('air3.png') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: white;
+    text-align: center;
+    padding: 19% 20px;
+    overflow: hidden;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#home h1,
+#home p,
+#home button {
+    position: relative;
+}
+
+#home h1 {
+    font-size: 3.5rem;
+    margin: 20px 0;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+    font-family:"Nunito", sans-serif;
+}
+
+#home p {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    font-family:"Sarabun", sans-serif;
+}
+
+#home button {
+    background-color: #579BB1 ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 40px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+#home span {
+  color:#579BB1;
+  font-family:"Nunito", sans-serif;
+
+}
+
+#home button:hover {
+    background-color: #000000;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #fffdfd;
+}
+
+#air-quality-info {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#air-quality-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#air-quality-info p {
+    font-size: 1.2rem;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+
+.main {
+  position: relative;
+  top: 180px;
+  text-align: center;
+}
+
+.main h1 {
+  color: #333;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 70px;
+  margin-top: 0;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+
+.btn-main {
+  background-color: #333;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  padding: 16px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.supporting {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.supporting .col {
+  float: left;
+  width: 33%;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+.supporting img {
+  height: 32px;
+}
+
+.supporting h2 {
+  font-weight: 600;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.supporting p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 50px;
+  margin-bottom: 40px;
+}
+
+.btn-default {
+  border: 1px solid #333333;
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 15px 50px;
+}
+
+.clearfix {
+  clear: both;
+}
+.btn-default:hover {
+  border:1px solid #579BB1 ;
+}
+
+
+
+@media (max-width: 500px) {
+  .main h1 {
+    font-size: 50px;
+    padding: 0 40px;
+  }
+  .supporting .col {
+    width: 100%;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    #home {
+        padding: 150px 0;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    #home p {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        padding: 30px 10px;
+    }
+
+    .section h2 {
+        font-size: 2rem;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+
+    .solutions {
+        margin-bottom: 50px;
+    }
+
+    .solution-box {
+        max-width: 100%;
+    }
+
+    .impact-content {
+        padding: 30px;
+        margin: 50px 0;
+    }
+
+    .impact-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .impact-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Large screens (e.g., desktops) */
+@media (min-width: 1200px) {
+    .solutions {
+        justify-content: space-between;
+    }
+
+    .solution-box {
+        max-width: 20%;
+    }
+
+    .impact-content {
+        padding: 100px;
+    }
+
+    .impact-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .impact-content p {
+        font-size: 1.2rem;
+    }
+}
